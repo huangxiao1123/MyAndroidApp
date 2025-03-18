@@ -1,0 +1,17 @@
+名称：构建APK
+ON ：[ PUSH ]
+工作：
+  建造：
+    运行： ubuntu-latest
+    步骤：
+      -用途：操作/结帐@v4
+      -名称：安装依赖
+        运行：|
+          sudo apt-get安装-y git zip unzip openjdk-8-jdk
+          PIP安装Buildozer Cython Kivy
+      -名称：生成apk
+        运行： Buildozer -V Android调试
+      -用途：操作/upload-artifact@v3
+        和with
+          名称： apk
+          路径： bin/*。apk
